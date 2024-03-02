@@ -141,7 +141,8 @@ form button {
     align-items: center;
 }
 
-.popular-items, .popular-img {
+.popular-items,
+.popular-img {
     width: calc((100% - 50px)/2);
 }
 
@@ -152,15 +153,83 @@ form button {
 .popular-items p {
     margin: 24px 0;
 }
-.popular-items ul>li{
+
+.popular-items ul>li {
     margin-top: 13px;
 }
+
+/* destination styles */
+
+.destination {
+    text-align: center;
+}
+
+.destination-description {
+    margin: 24px 0 48px 0;
+}
+
+.img-box {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.img-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+    font-weight: 800;
+}
+
+.img-box img {
+    width: 100%;
+    height: 300px;
+}
+.img-1{
+    grid-area: mal;
+}
+.img-2 {
+    grid-area: indo;
+}
+
+.img-3 {
+    grid-area: lanka;
+}
+
+.img-4 {
+    grid-area: north;
+}
+
+.img-5 {
+    grid-area: kashmir;
+}
+
+.img-6 {
+    grid-area: bdesh;
+}
+
+.img-7 {
+    grid-area: bban;
+}
+
+.destination-container {
+    display: grid;
+    grid-template-areas:
+        'mal mal mal mal mal indo indo indo indo indo'
+        'lanka lanka lanka north north north north north kashmir kashmir'
+        'bdesh bdesh bdesh bdesh bban bban bban bban bban bban';
+    gap: 24px;
+}
+
 
 /* Responsive Styles */
 /* For Mobile */
 @media screen and (max-width: 600px) {
 
     nav,
+    nav>ul,
     .banner form,
     .popular {
         flex-direction: column;
@@ -172,6 +241,9 @@ form button {
 
     nav>ul {
         gap: 15px;
+    }
+    .logo h2 {
+        font-size: 1.5rem;
     }
 
     .banner {
@@ -198,16 +270,35 @@ form button {
         width: 225px;
     }
 
-    .popular{
-        gap: 30px;
-        margin: 50px 0;
-    }
     .banner .btn-primary {
         padding: 16px;
         width: 257px;
     }
-    .popular-items, .popular-img {
+
+    .popular {
+        gap: 30px;
+        margin: 50px 0;
+    }
+
+    .popular-items,
+    .popular-img {
         width: 100%;
+    }
+
+    .destination-container {
+        grid-template-areas:
+            'mal'
+            'indo'
+            'lanka'
+            'north'
+            'kashmir'
+            'bdesh'
+            'bban';
+        gap: 10px;
+    }
+
+    .img-box img {
+        height: 176px;
     }
 }
 
