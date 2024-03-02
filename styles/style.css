@@ -56,6 +56,15 @@ nav ul > li{
     color: var(--primary-color);
 }
 
+/* banner styles */
+
+.banner{
+    background: url(../images/Group\ 13\ \(1\)\ \(1\).png), linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
+    background-blend-mode: multiply;
+    text-align: center;
+    padding: 106px 185px;
+    border-radius: 16px;
+}
 
 /* Responsive Styles */
 /* For Mobile */
@@ -74,4 +83,9 @@ nav ul > li{
     nav > ul{
         gap: 15px;
     }
+}
+
+/* For Tablet */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    
 }
