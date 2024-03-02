@@ -1,91 +1,173 @@
+/* Mulish font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 /* All style */
-*{
+* {
     margin: 0;
     padding: 0;
     outline: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul > li{
+
+ul>li {
     list-style: none;
 }
 
-body{
+body {
     width: 80%;
     max-width: 1170px;
-    margin:  0 auto;
+    margin: 0 auto;
+    font-family: "Mulish", sans-serif;
 }
-img{
+
+img {
     max-width: 100%;
 }
 
 /* variable */
 
-:root{
+:root {
     --primary-color: #FF5400;
     --description-text-color: rgba(19, 19, 24, 0.70);
+}
 
+/* Shared Styles */
+.btn-primary {
+    background-color: #FF5400;
+    padding: 15px 32px;
+    color: #FFF;
 }
 
 /* header styles */
 /* nav styles */
-nav{
+nav {
     margin: 60px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-nav .logo{
+
+nav .logo {
     display: flex;
     align-items: center;
     gap: 16px;
 }
-nav > ul{
+
+nav>ul {
     display: flex;
     gap: 44px;
 }
-.logo h2{
+
+.logo h2 {
     font-size: 2.25rem;
 }
-nav ul > li{
+
+nav ul>li {
     font-size: 1.125rem;
     color: #424247;
 }
-.logo span, ul .home{
+
+.logo span,
+ul .home {
     color: var(--primary-color);
 }
 
 /* banner styles */
 
-.banner{
+.banner {
     background: url(../images/Group\ 13\ \(1\)\ \(1\).png), linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
     background-blend-mode: multiply;
     text-align: center;
-    padding: 106px 185px;
+    padding: 106px 120px;
     border-radius: 16px;
+}
+
+.banner-title {
+    color: #FFF;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.banner-description {
+    margin: 24px 50px 48px 50px;
+    color: #FFF;
+}
+
+.banner form {
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.30);
+    display: flex;
+    gap: 24px;
+    padding: 16px;
+}
+
+.banner form input,
+form button {
+    border-radius: 8px;
+    border: none;
+    padding: 0 10px;
+    color: var(--description-text-color);
+    width: 172px;
+}
+
+.banner form>button>i {
+    margin-right: 5px;
 }
 
 /* Responsive Styles */
 /* For Mobile */
 @media screen and (max-width: 600px) {
 
-    body{
-        max-width: 90%;
-        margin:  0 auto;
+    body {
+        max-width: 98%;
+        margin: 0 auto;
     }
-    nav{
+
+    nav,
+    .banner form {
         flex-direction: column;
     }
-    nav{
+
+    nav {
         gap: 10px;
     }
-    nav > ul{
+
+    nav>ul {
         gap: 15px;
+    }
+
+    .banner {
+        padding: 24px 16px;
+    }
+
+    .banner-title {
+        font-size: 1.375rem;
+    }
+
+    .banner-description {
+        font-size: 0.875rem;
+    }
+
+    .banner form {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .banner form input, .banner .btn-primary{
+        padding: 16px;
+        margin: 0 auto;
+        width: 225px;
+    }
+    .banner .btn-primary{
+        padding: 16px;
+        width: 257px;
     }
 }
 
 /* For Tablet */
-@media screen and (min-width: 600px) and (max-width: 992px) {
-    
-}
+@media screen and (min-width: 600px) and (max-width: 992px) {}
